@@ -15,3 +15,6 @@ target_link_libraries(tensors_arithmetics "${TORCH_LIBRARIES}")
 
 add_executable(automatic_differenciation tensors/automatic_differenciation.cpp)
 target_link_libraries(automatic_differenciation "${TORCH_LIBRARIES}")
+
+add_executable(neural_network tensors/neural_network.cpp)
+target_link_libraries(neural_network "${TORCH_LIBRARIES}")

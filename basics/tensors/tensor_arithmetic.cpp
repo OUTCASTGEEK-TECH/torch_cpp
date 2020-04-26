@@ -26,7 +26,8 @@ int main() {
 
     std::cout << "\nAny operation that mutates a tensor in-place is post-fixed with an _. For example: x.copy_(y), x.t_(), will change x." << std::endl;
     y = y.add_(x);
-    std::cout << "y.add_(x) => \n" << y << std::endl;
+    std::cout << "y=y.add_(x) => \n" << y << std::endl;
+    std::cout << "print(y[:, 1]) => \n" << y.slice(-1, 1) << std::endl;
 
     if (torch::hasCUDA()) {
         auto device = torch::device(c10::kCUDA);
