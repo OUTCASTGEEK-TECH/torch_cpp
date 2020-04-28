@@ -18,3 +18,6 @@ target_link_libraries(automatic_differenciation "${TORCH_LIBRARIES}")
 
 add_executable(neural_network tensors/neural_network.cpp)
 target_link_libraries(neural_network "${TORCH_LIBRARIES}")
+
+add_executable(image_classifier tensors/image_classifier.cpp)
+target_link_libraries(image_classifier "${TORCH_LIBRARIES}")
