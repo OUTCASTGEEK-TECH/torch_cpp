@@ -2,4 +2,6 @@
 .idea
 cmake-build-debug
 *.zip
+*.tar.gz
 libtorch
+cifar-10-batches-bin

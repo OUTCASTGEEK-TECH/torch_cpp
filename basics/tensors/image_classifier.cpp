@@ -86,16 +86,16 @@ int main() {
     );
 
     // Loading Data
-//    auto dataset = CIFAR10("./")
-//            .map(torch::data::transforms::Normalize<>(0.5, 0.5))
-//            .map(torch::data::transforms::Stack<>());
-//    auto data_loader = torch::data::make_data_loader(
-//            std::move(dataset),
-//            torch::data::DataLoaderOptions().workers(4)
-//    );
-//
-//    for (int epoch = 0; epoch <= 2; epoch++) {  // loop over the dataset multiple times
-//        // get the inputs; data is a list of [inputs, labels]
-//
-//    }
+    auto dataset = CIFAR10("./cifar-10-batches-bin")
+            .map(torch::data::transforms::Normalize<>(0.5, 0.5))
+            .map(torch::data::transforms::Stack<>());
+    auto data_loader = torch::data::make_data_loader(
+            std::move(dataset),
+            torch::data::DataLoaderOptions().workers(4)
+    );
+
+    for (int epoch = 0; epoch <= 2; epoch++) {  // loop over the dataset multiple times
+        // get the inputs; data is a list of [inputs, labels]
+
+    }
 }

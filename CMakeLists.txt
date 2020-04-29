@@ -8,5 +8,6 @@ include(cmake/utilities.cmake)
 include(cmake/LibTorch.cmake)
 
 install_liborch_mac(1.5.0)
+install_cifar10()
 
 add_subdirectory(basics)
